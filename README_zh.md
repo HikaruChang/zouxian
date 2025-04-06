@@ -24,52 +24,33 @@ Apple 限制在国行 Mac 上使用 Apple Intelligence 和 Xcode LLM（Predictiv
 
 ### 前提条件
 
-- 禁用 SIP 调试限制（在恢复模式下运行 `csrutil enable --without debug` 命令）。
-- 对于 Apple Intelligence：登录非国区 Apple ID，地区设置为美国，语言设置为英语（美国）。
+- 禁用 SIP 调试限制（在恢复模式下运行 `csrutil enable --without debug` 命令）。进入恢复模式的方法是：重启 Mac，按住电源键，直到看到启动选项窗口，选择“选项”，然后点击“继续”。请勿先按一次电源键再按住，可能会导致无法进入真正的恢复模式。
+- 对于 Apple Intelligence：登录非国区 Apple ID，地区设置中国大陆以外的地区，这里推荐香港、台湾、美国，并且设置的系统语言与Siri语言要一致，地区的主语言要与设置的语言对应（例如美国-英文，香港-繁体中文）。
 - 对于 Xcode Predictive Code Completion：安装 Xcode 并至少运行一次。
 
 > [!NOTE]  
 > 如果只想使用 Apple Intelligence，无需安装 Xcode。
 
-### 方法一：通过 [Homebrew](https://brew.sh)
+请在终端中运行以下命令：
 
 ```shell
-brew install catme0w/tap/zouxian
-sudo brew services start zouxian
-```
-
-> 如果你感兴趣，在此查看 [Formula](https://github.com/CatMe0w/homebrew-tap/blob/master/Formula/zouxian.rb)
-
-### 方法二：手动
-
-```shell
-sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
+sudo curl https://raw.githubusercontent.com/hikaruchang/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
 sudo chmod +x /usr/local/bin/zouxian
-sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/cat.me0w.zouxian.plist -o /Library/LaunchDaemons/cat.me0w.zouxian.plist
-sudo launchctl load -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo curl https://raw.githubusercontent.com/hikaruchang/zouxian/master/rua.hikaru.zouxian.plist -o /Library/LaunchDaemons/rua.hikaru.zouxian.plist
+sudo launchctl load -w /Library/LaunchDaemons/rua.hikaru.zouxian.plist
 ```
 
 ## 卸载
 
-### 若通过 [Homebrew](https://brew.sh) 安装
-
 ```shell
-sudo brew services stop zouxian
-sudo rm -rf /opt/homebrew/Cellar/zouxian
-brew untap catme0w/tap
-```
-
-### 若手动安装
-
-```shell
-sudo launchctl unload -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
-sudo rm /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo launchctl unload -w /Library/LaunchDaemons/rua.hikaru.zouxian.plist
+sudo rm /Library/LaunchDaemons/rua.hikaru.zouxian.plist
 sudo rm /usr/local/bin/zouxian
 ```
 
 ## 感谢
 
-感谢使得这一切成为可能的人们：[Kyle-Ye](https://github.com/Kyle-Ye)、[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko。
+感谢使得这一切成为可能的人们：[CatMe0w](https://github.com/CatMe0w)、[Kyle-Ye](https://github.com/Kyle-Ye)、[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko。
 
 ## 许可证
 

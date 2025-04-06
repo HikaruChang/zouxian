@@ -26,52 +26,33 @@ Disabling SIP will reduce the security of the system and make iOS apps in App St
 
 ### Prerequisites
 
-- SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode).
-- For Apple Intelligence: A non-China Apple ID signed in, region set to the United States, and language set to English (US).
+- SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode). To enter recovery mode, restart your Mac and hold the power button until you see the startup options window. Select "Options" and click "Continue". Do not press the power button once and then hold it, as this may prevent you from entering true recovery mode.
+- For Apple Intelligence: Sign in with a non-Mainland China Apple ID and set your region to somewhere outside Mainland China. Hong Kong, Taiwan, and the United States are recommended. Also, make sure that the system language and Siri language are the same, and that the region's primary language matches the language you set (for example, United States - English, Hong Kong - Traditional Chinese).
 - For Xcode Predictive Code Completion: Xcode is installed and run at least once.
 
 > [!NOTE]  
 > No need to install Xcode if you only want to use Apple Intelligence.
 
-### Method 1: Via [Homebrew](https://brew.sh)
+Please run the following commands in the terminal:
 
 ```shell
-brew install catme0w/tap/zouxian
-sudo brew services start zouxian
-```
-
-> Check out [the formula](https://github.com/CatMe0w/homebrew-tap/blob/master/Formula/zouxian.rb) if you're interested
-
-### Method 2: Manually
-
-```shell
-sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
+sudo curl https://raw.githubusercontent.com/hikaruchang/zouxian/master/zouxian.sh -o /usr/local/bin/zouxian
 sudo chmod +x /usr/local/bin/zouxian
-sudo curl https://raw.githubusercontent.com/CatMe0w/zouxian/master/cat.me0w.zouxian.plist -o /Library/LaunchDaemons/cat.me0w.zouxian.plist
-sudo launchctl load -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo curl https://raw.githubusercontent.com/hikaruchang/zouxian/master/rua.hikaru.zouxian.plist -o /Library/LaunchDaemons/rua.hikaru.zouxian.plist
+sudo launchctl load -w /Library/LaunchDaemons/rua.hikaru.zouxian.plist
 ```
 
 ## Uninstall
 
-### If Installed Via [Homebrew](https://brew.sh)
-
 ```shell
-sudo brew services stop zouxian
-sudo rm -rf /opt/homebrew/Cellar/zouxian
-brew untap catme0w/tap
-```
-
-### If Installed Manually
-
-```shell
-sudo launchctl unload -w /Library/LaunchDaemons/cat.me0w.zouxian.plist
-sudo rm /Library/LaunchDaemons/cat.me0w.zouxian.plist
+sudo launchctl unload -w /Library/LaunchDaemons/rua.hikaru.zouxian.plist
+sudo rm /Library/LaunchDaemons/rua.hikaru.zouxian.plist
 sudo rm /usr/local/bin/zouxian
 ```
 
 ## Acknowledgement
 
-Thanks for those who make this possible together: [Kyle-Ye](https://github.com/Kyle-Ye), [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
+Thanks for those who make this possible together: [CatMe0w](https://github.com/CatMe0w), [Kyle-Ye](https://github.com/Kyle-Ye), [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
 
 ## License
 
