@@ -1,6 +1,6 @@
 # zouxian 走线
 
-中文版请见[这里](https://github.com/CatMe0w/zouxian/blob/master/README_zh.md)。
+中文版请见[这里](https://github.com/hikaruchang/zouxian/blob/master/README_zh.md)。
 
 Apple restricted the access to Apple Intelligence and Xcode LLM (Predictive Code Completion) feature on China models of Mac. That is, if you are using a Mac bought in China, even if you are not in China, you will not be able to use Apple Intelligence or Xcode Predictive Code Completion.
 
