@@ -22,6 +22,12 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 
 Disabling SIP will reduce the security of the system and make iOS apps in App Store and Apple Pay unusable.
 
+# If you encounter any problems during the use of this script, or if your Mac bricks, I am not responsible for any of these.
+# You must agree to the following terms when using this script:
+# 1. You must back up your data before using this script.
+# 2. You must understand that disabling SIP will reduce the security of the system and make iOS apps in App Store and Apple Pay unusable.
+# 3. This script is for learning and research purposes only, and is prohibited for any commercial use.
+
 ## Install
 
 ### Prerequisites

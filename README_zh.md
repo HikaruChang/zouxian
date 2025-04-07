@@ -19,6 +19,11 @@ Apple 限制在国行 Mac 上使用 Apple Intelligence 和 Xcode LLM（Predictiv
 ## 免责声明
 
 禁用 SIP 会降低系统安全性，并且会使 App Store 中的 iOS app 与 Apple Pay 无法使用。
+# 如果你在使用过程中遇到任何问题，或者你的 Mac 变砖了，我不承担任何责任。
+# 你在使用这个脚本时，必须同意以下条款：
+# 1. 你必须在使用这个脚本之前备份你的数据。
+# 2. 你必须了解禁用 SIP 会降低系统安全性，并且会使 App Store 中的 iOS app 与 Apple Pay 无法使用。
+# 3. 本脚本仅供学习和研究使用，禁止用于任何商业用途。
 
 ## 安装
 
