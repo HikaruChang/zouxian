@@ -20,25 +20,30 @@ Persistent solution after rebooting, based on [Cyandev's guide](https://gist.git
 
 ## Disclaimer
 
-Disabling SIP will reduce the security of the system and make iOS apps in App Store and Apple Pay unusable.
-
-# If you encounter any problems during the use of this script, or if your Mac bricks, I am not responsible for any of these.
-# You must agree to the following terms when using this script:
-# 1. You must back up your data before using this script.
-# 2. You must understand that disabling SIP will reduce the security of the system and make iOS apps in App Store and Apple Pay unusable.
-# 3. This script is for learning and research purposes only, and is prohibited for any commercial use.
+You must agree to the following terms when using this script:
+1. You must back up your data before using this script.
+2. This script is for learning and research purposes only, and is prohibited for any commercial use.
 
 ## Install
 
 ### Prerequisites
 
-- SIP debugging restrictions are disabled (via `csrutil enable --without debug` command in recovery mode). To enter recovery mode, restart your Mac and hold the power button until you see the startup options window. Select "Options" and click "Continue". Do not press the power button once and then hold it, as this may prevent you from entering true recovery mode.
+- SIP debugging restrictions are disabled (via `csrutil disable` command in recovery mode). To enter recovery mode, restart your Mac and hold the power button until you see the startup options window. Select "Options" and click "Continue". Do not press the power button once and then hold it, as this may prevent you from entering true recovery mode.
 - For Apple Intelligence: Sign in with a non-Mainland China Apple ID and set your region to somewhere outside Mainland China. Hong Kong, Taiwan, and the United States are recommended. Also, make sure that the system language and Siri language are the same, and that the region's primary language matches the language you set (for example, United States - English, Hong Kong - Traditional Chinese).
 - For Xcode Predictive Code Completion: Xcode is installed and run at least once.
+- After running the automatic mode script, you can enter recovery mode and run the `csrutil enable` command to enable SIP.
 
 > [!NOTE]  
 > No need to install Xcode if you only want to use Apple Intelligence.
 
+### Automatic mode (recommended)
+Please run the following command in the terminal:
+
+```shell
+curl -sL https://raw.githubusercontent.com/HikaruChang/zouxian/master/enable_ai.sh | bash
+```
+
+### Manual mode
 Please run the following commands in the terminal:
 
 ```shell
@@ -58,7 +63,7 @@ sudo rm /usr/local/bin/zouxian
 
 ## Acknowledgement
 
-Thanks for those who make this possible together: [CatMe0w](https://github.com/CatMe0w), [Kyle-Ye](https://github.com/Kyle-Ye), [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko.
+Thanks for those who make this possible together: [CatMe0w](https://github.com/CatMe0w), [Kyle-Ye](https://github.com/Kyle-Ye), [Cyandev](https://twitter.com/unixzii), [Lakr233](https://twitter.com/Lakr233), [Sou1gh0st](https://twitter.com/Sou1gh0st), Yuriko, [KanShuRichard](https://github.com/kanshurichard).
 
 ## License
 

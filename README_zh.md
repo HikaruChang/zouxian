@@ -18,24 +18,30 @@ Apple 限制在国行 Mac 上使用 Apple Intelligence 和 Xcode LLM（Predictiv
 
 ## 免责声明
 
-禁用 SIP 会降低系统安全性，并且会使 App Store 中的 iOS app 与 Apple Pay 无法使用。
-# 如果你在使用过程中遇到任何问题，或者你的 Mac 变砖了，我不承担任何责任。
-# 你在使用这个脚本时，必须同意以下条款：
-# 1. 你必须在使用这个脚本之前备份你的数据。
-# 2. 你必须了解禁用 SIP 会降低系统安全性，并且会使 App Store 中的 iOS app 与 Apple Pay 无法使用。
-# 3. 本脚本仅供学习和研究使用，禁止用于任何商业用途。
+你在使用这个脚本时，必须同意以下条款：
+1. 你必须在使用这个脚本之前备份你的数据。
+2. 本脚本仅供学习和研究使用，禁止用于任何商业用途。
 
 ## 安装
 
 ### 前提条件
 
-- 禁用 SIP 调试限制（在恢复模式下运行 `csrutil enable --without debug` 命令）。进入恢复模式的方法是：重启 Mac，按住电源键，直到看到启动选项窗口，选择“选项”，然后点击“继续”。请勿先按一次电源键再按住，可能会导致无法进入真正的恢复模式。
+- 禁用 SIP 调试限制（在恢复模式下运行 `csrutil disable` 命令）。进入恢复模式的方法是：重启 Mac，按住电源键，直到看到启动选项窗口，选择“选项”，然后点击“继续”。请勿先按一次电源键再按住，可能会导致无法进入真正的恢复模式。
 - 对于 Apple Intelligence：登录非国区 Apple ID，地区设置中国大陆以外的地区，这里推荐香港、台湾、美国，并且设置的系统语言与Siri语言要一致，地区的主语言要与设置的语言对应（例如美国-英文，香港-繁体中文）。
 - 对于 Xcode Predictive Code Completion：安装 Xcode 并至少运行一次。
+- 在运行自动模式脚本之后，您可以进入恢复模式运行 `csrutil enable` 命令来启用 SIP。
 
 > [!NOTE]  
 > 如果只想使用 Apple Intelligence，无需安装 Xcode。
 
+### 自动模式 （推荐）
+请在终端中运行以下命令：
+
+```shell
+curl -sL https://raw.githubusercontent.com/HikaruChang/zouxian/master/enable_ai.sh | bash
+```
+
+### 手动模式
 请在终端中运行以下命令：
 
 ```shell
@@ -55,7 +61,7 @@ sudo rm /usr/local/bin/zouxian
 
 ## 感谢
 
-感谢使得这一切成为可能的人们：[CatMe0w](https://github.com/CatMe0w)、[Kyle-Ye](https://github.com/Kyle-Ye)、[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko。
+感谢使得这一切成为可能的人们：[CatMe0w](https://github.com/CatMe0w)、[Kyle-Ye](https://github.com/Kyle-Ye)、[Cyandev](https://twitter.com/unixzii)、[Lakr233](https://twitter.com/Lakr233)、[Sou1gh0st](https://twitter.com/Sou1gh0st)、Yuriko、[KanShuRichard](https://github.com/kanshurichard)。
 
 ## 许可证
 
